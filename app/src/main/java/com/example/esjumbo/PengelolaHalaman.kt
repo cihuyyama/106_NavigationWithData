@@ -26,7 +26,8 @@ import com.example.esjumbo.data.DataSource
 enum class PengelolaHalaman {
     Home,
     Rasa,
-    Summary
+    Summary,
+    Data
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -81,6 +82,16 @@ fun EsJumboApp(
             ) {
                 HalamanHome (
                     onNextButtonClicked = {
+                        navController.navigate(PengelolaHalaman.Data.name)
+                    }
+                )
+            }
+            composable(
+                route = PengelolaHalaman.Data.name
+            ) {
+                HalamanDataPelanggan(
+                    onSubmitButtonClick = {
+                        viewModel.setContact(it)
                         navController.navigate(PengelolaHalaman.Rasa.name)
                     }
                 )
