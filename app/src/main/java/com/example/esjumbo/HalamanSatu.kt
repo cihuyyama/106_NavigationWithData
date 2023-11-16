@@ -77,11 +77,7 @@ fun HalamanSatu(
                     Text(item)
                 }
             }
-            Divider(
-                thickness = dimensionResource(R.dimen.large),
-                modifier = Modifier
-                    .padding(bottom = dimensionResource(R.dimen.medium))
-            )
+            Divider()
 
             Row (
                 modifier = Modifier
@@ -117,11 +113,7 @@ fun HalamanSatu(
                 }
             }
 
-            Divider(
-                thickness = dimensionResource(R.dimen.large),
-                modifier = Modifier
-                    .padding(bottom = dimensionResource(R.dimen.medium))
-            )
+            Divider()
 
             Row (
                 modifier = Modifier
@@ -136,7 +128,7 @@ fun HalamanSatu(
                     modifier = Modifier
                         .weight(1f)
                 ) {
-
+                    Text(text = "Batal")
                 }
 
                 Button(

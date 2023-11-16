@@ -27,6 +27,9 @@ fun HalamanDua (
     modifier: Modifier = Modifier
 ) {
     val items = listOf(
+        Pair(stringResource(R.string.nama), orderUIState.nama),
+        Pair(stringResource(R.string.noTelp), orderUIState.noTelp),
+        Pair(stringResource(R.string.alamat), orderUIState.alamat),
         Pair(stringResource(R.string.quantity), orderUIState.jumlah),
         Pair(stringResource(R.string.flavor), orderUIState.rasa)
     )
@@ -42,20 +45,18 @@ fun HalamanDua (
                 Text(text = item.second.toString(), fontWeight = FontWeight.Bold)
             }
 
-            Divider(
-                thickness = dimensionResource(R.dimen.large)
-            )
+            Divider()
 
             Spacer(
                 modifier = Modifier
                     .height(dimensionResource(R.dimen.padding_small))
             )
 
+        }
             FormatLabelHarga(
                 subtotal = orderUIState.harga,
                 modifier = Modifier.align(Alignment.End)
             )
-        }
 
         Row (
             modifier = Modifier
